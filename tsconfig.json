@@ -1,10 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
+
+
+
+    "esModuleInterop": true,  //export import 
+    "forceConsistentCasingInFileNames": true, //також  export import 
+
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -12,6 +18,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+
+
+    // Advance options 
+
+    "outDir": "./dist",
+    "sourceMap": true,
 
     /* Linting */
     "strict": true,
