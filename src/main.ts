@@ -178,12 +178,33 @@
 
 // =============================================Індексовані значення==============================================
 
-interface User {
-  [key: string]: number | null; //union
-}
-const fruit: User = {
-  apple: 32,
-  banana: 34,
-  oranges: null,
-};
+// interface User {
+//   [key: string]: number | null; //union
+// }
+// const fruit: User = {
+//   apple: 32,
+//   banana: 34,
+//   oranges: null,
+// };
 // =============================================GENERIC================================================================
+interface IPerson {
+  name: string;
+  age: number;
+  greet(phrase: string): void;
+}
+
+interface IPilot extends IPerson {
+  seranme:string
+}
+
+
+let user: IPilot = {
+  name: "Pnada",
+  age: 32,
+  greet(phrase) {
+    console.log("Hello");
+    
+  },
+  seranme:"Wy"
+}
+console.log(user);
